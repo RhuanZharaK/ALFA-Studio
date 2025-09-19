@@ -1,0 +1,217 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth; /* Scroll suave */
+}
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6B5BFF, #8A6BFF); /* azul/violeta */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+header nav {
+    margin-top: 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Seções */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Portfolio */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.4s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.4s;
+}
+
+.card p {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Sobre */
+#sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #6B5BFF; /* azul/violeta */
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(135deg, #6B5BFF, #8A6BFF); /* azul/violeta */
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #8A6BFF, #6B5BFF); /* inversão do gradiente */
+}
+
+/* Footer */
+footer {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.discord-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #5865F2; /* cor oficial do Discord */
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.discord-btn:hover {
+    background-color: #4752C4; /* tom mais escuro no hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111; /* fundo escuro */
+    color: #fff;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 28px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #5865F2; /* azul do Discord ou pode mudar */
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Rhuan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ALFA Studio</h1>
+            <p>Designer Gráfico & Marketing Digital</p>
+            <nav>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+                <a href="#Discord">Discord</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Meus Trabalhos</h2>
+            <div class="grid">
+                <div class="card">
+                <img src="images/project1.jpg" alt="Projeto 1">
+                <p><strong>A Donzela da Rosa Branca 🌿🌹</strong><br>
+                Ilustração digital em estilo clássico, com atmosfera etérea e inspiração medieval.</p>
+                </div>
+                <div class="card"><img src="images/project2.jpg" alt="Projeto 2"><p>Projeto 2</p></div>
+                <div class="card"><img src="images/project3.jpg" alt="Projeto 3"><p>Projeto 3</p></div>
+                <div class="card"><img src="images/project4.jpg" alt="Projeto 4"><p>Projeto 4</p></div>
+                <div class="card"><img src="images/project5.jpg" alt="Projeto 5"><p>Projeto 5</p></div>
+                <div class="card"><img src="images/project6.jpg" alt="Projeto 6"><p>Projeto 6</p></div>
+                <div class="card"><img src="images/project7.jpg" alt="Projeto 7"><p>Projeto 7</p></div>
+                <div class="card"><img src="images/project8.jpg" alt="Projeto 8"><p>Projeto 8</p></div>
+                <div class="card"><img src="images/project9.jpg" alt="Projeto 9"><p>Projeto 9</p></div>
+                <div class="card"><img src="images/project10.jpg" alt="Projeto 10"><p>Projeto 10</p></div>
+                <div class="card"><img src="images/project11.jpg" alt="Projeto 11"><p>Projeto 11</p></div>
+                <div class="card"><img src="images/project12.jpg" alt="Projeto 12"><p>Projeto 12</p></div>
+                <div class="card"><img src="images/project13.jpg" alt="Projeto 13"><p>Projeto 13</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Sou comunicativo, com experiência em marketing digital, design gráfico, atendimento ao cliente, programação de aplicativos e pequenos sites. Estou sempre aprendendo e buscando novos desafios.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+    <p>© 2025 Rhuan Henriques Campos Aguiar</p>
+    <div class="social-links">
+        <a href="https://discord.gg/MQhUG9fS" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://wa.me/5522998054365" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/rhuan_henrique7/?igsh=aTV3c3B5MzU3NjI0" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@seucanal" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+    <!-- Script para scroll suave -->
+    <script>
+        const links = document.querySelectorAll('nav a');
+        for (const link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // Animação de fade-in nos cards
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>
